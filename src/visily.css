@@ -1,0 +1,49 @@
+/* Screen 1 */
+.page {
+    position: absolute; 
+    top: 0px; 
+    left: -1891px; 
+    width: 1440px; 
+    height: 900px; 
+    background: #FFFFFFFF; 
+  }
+  /* Button 2077 */
+.button {
+    position: absolute; 
+    top: 146px; 
+    left: 32px; 
+    width: 512px; 
+    height: 36px; 
+    padding: 0 14px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-family: Josefin Sans; /* Body */
+    font-size: 14px; 
+    line-height: 22px; 
+    color: #FFFFFFFF; /* white */
+    background: #2A7AEDFF; 
+    opacity: 1; 
+    border: none; 
+    border-radius: 6px; /* border-m */
+    gap: 8px; 
+  }
+  .button .icon {
+    width: 16px; 
+    height: 16px; 
+    fill: #FFFFFFFF; /* white */
+  }
+  /* Hover */
+  .button:hover {
+    color: #FFFFFFFF; /* white */
+    background: #1261CFFF; 
+  }
+  /* Pressed */
+  .button:hover:active {
+    color: #FFFFFFFF; /* white */
+    background: #1055B6FF; 
+  }
+  /* Disabled */
+  .button:disabled {
+    opacity: 0.4; 
+  }
