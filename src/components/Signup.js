@@ -1,7 +1,7 @@
 import {React,useState }from 'react'
 import { faGoogle,faFacebook,faApple } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { NavLink } from 'react-router-dom';
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -19,15 +19,28 @@ export default function Signup() {
 
     <section className='h-full bg-[#20b3b8]'>
       <div className="container lg:h-full bg-[#20b3b8] ">
+          {/* Top section */}
+          <div className="flex justify-between items-center m-6">
+          <div>
+            <img src="./svg/logo.svg" alt="Logo" className="w-32" style={{ fill: "bg-white" }} />
+          </div>
+          <div>
+            <span className=" ml-6 text-t3 font-body text-white hover:text-neutral-700"> Already have an Account ?
+              </span>
+              <NavLink to="/signin" className=" mr-6 text-t4 font-body text-white hover:text-neutral-700">Sign In</NavLink>
+           
+          </div>
+        </div>
         <div className="gap-6 flex lg:h-full flex-wrap items-center justify-center text-body dark:text-neutral-200">
           <div className="w-full md:my-10 lg:w-3/5">
-            <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
+          
+            <section className="block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
               <div className="gap-0 lg:flex lg:flex-wrap rounded-lg">
                  {/* left section */}
-                <div className="px-4 md:px-0 lg:w-3/5">
-                  <div className="lg:mx-6 md:p-10 lg:p-20 ">
+                <div className="px-4 md:px-0 lg:w-1/2 w-full">
+                  <div className="lg:mx-6 md:p-10 lg:px-10 lg:py-15 ">
                    
-                    <div className=''>
+                  
                     <form onSubmit={handleSubmit} className='font-body content-center '>
                         <div>
 
@@ -130,23 +143,17 @@ export default function Signup() {
                           </button>
                         </div>
                     </form> 
-                  </div>
+                 
                 </div>
-      
                 </div>
                 {/* right section */}
-                <div className="flex md:py-10 h-1/2  my-10 lg:w-2/5 rounded-r-lg md:mt-6 md:pt-12 justity-center item-center">
-  
-                  <img
-                  className='w-full'
-                  src="./images/signup.png"
-                  alt="logo"/>
-
-                </div>
-              
+             
+                <div className="hidden lg:flex lg:w-1/2 justify-center items-center bg-[#82C45AFF] rounded-r-lg">
+              <img className='w-3/4' src="./svg/img.svg" alt="img"/>
+            </div>
               </div>
              
-            </div>
+            </section>
           </div>
         </div>
       </div>
